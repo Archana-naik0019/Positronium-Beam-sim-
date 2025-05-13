@@ -1,0 +1,23 @@
+# Enable visualization
+/vis/open OGL 600x600
+
+# Draw the detectorcomponents
+/vis/drawVolume
+
+# Configure scene
+/vis/viewer/set/viewpointThetaPhi 70 30
+/vis/viewer/set/zoom 1.5
+
+# Show particle trajectories
+/vis/scene/add/trajectories smooth
+/vis/scene/endOfEventAction accumulate
+
+# Set drawing style
+/vis/scene/add/axes 0 0 0 50 cm
+/vis/scene/add/trajectories smooth
+
+# Enable tracking of photons
+/tracking/storeTrajectory 1
+
+# Refresh the display
+/vis/viewer/refresh
